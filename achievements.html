@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Achievements</title>
+   <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous">
+
+	</script>
+
+  <style type="text/css">
+    input{
+      border:1px solid #fff;
+      padding:10px;
+      border-radius:5px;
+    }
+  </style>
+</head>
+
+<body>
+	<!--Nav Bar-->
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<a class="navbar-brand" href="index.html"><img src="logo.png"></a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class = "collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href = "login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href = "budgeting.html">Budget + Report</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href = "aboutus.html">About Us</a>
+                </li>
+                
+            </ul>
+        </div>
+      </nav>
+
+    <script src="script.js"></script>
+  </body>
+  <body style="background-color: #84b496;" onload= "myAchievements();">
+    <h1 class="pointheader">Points: <span id="myPoints"></span></h1>
+    <br><hr><br>
+    <div class="row">
+    <div class="col-md-6 achi" style="text-align: center;">
+      <h2>Achievements</h2>
+      <br>
+      <div class = "achitable" id= "box" style=""></div>
+    </div>
+    
+    <div class="col-md-6 achi" style="text-align: center;">
+      <h2>Donations (10 points = $0.01)</h2>
+      <br>
+      <select id="chosen">
+        <option value="" disabled selected>Choose your charity</option>
+        <option value="Feeding Texas">Feeding Texas</option>
+        <option value="Georgia Equality">Georgia Equality</option>
+        <option value="The Other Ones">The Other Ones</option>
+        <option value="Doctors Without Borders">Doctors Without Borders</option>
+        <option value="Operation Smile">Operation Smile</option>
+      </select>
+      <br><br>
+      <input type = text name = name placeholder = "Enter dollar amount" id="user_input" style="width:90%">
+      <br><br>
+      <input type = "submit" name = "submit" value = "Submit" onclick="showAmount()">
+      <br><br>
+      <p><span id='display'></span></p>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  
+
+<div class="container">
+  <img src="https://blush.design/api/download?shareUri=KJofAWNEE&c=Hair_0%7Effc943-0.1%7E711515-0.2%7Effc943-0.3%7E9b5120_Skin_0%7Ef6cbc3-0.1%7Eecafa3-0.2%7Ef6cbc3-0.3%7E7d4439&w=800&h=800&fm=png" alt="" style="width:400px; height:200px; margin-bottom: 5%;">
+<img src="https://blush.design/api/download?shareUri=4Oa4wyQUR&c=Hair_0%7E765227-0.2%7Ef3ddb4-0.3%7E8ae0d3_Skin_0%7Edb8c5c-0.2%7Effc280-0.3%7Effc280&w=800&h=800&fm=png" alt="" style="width:200px; height:200px; margin-left: 40%; margin-bottom: 5%;">
+</div>
+  
+
+  <script src="budgeting.js"></script>
+  <script src="achievements.js"></script>
+    <!-- <p id="display"></p> -->
+    <script>
+      str = window.location.search
+      str2 = str.substring(5)
+      document.getElementById('myPoints').innerHTML = str2
+      console.log(str2) 
+    </script>
+  </body>
+</html>
