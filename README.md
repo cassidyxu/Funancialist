@@ -1,2 +1,2 @@
 # Funancialist
- funancialist.jojobaest.repl.co
+https://funancialist.jojobaest.repl.co/
