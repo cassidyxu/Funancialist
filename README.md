@@ -1,2 +1,3 @@
 # Funancialist
-https://funancialist.jojobaest.repl.co/
+
+demo site: https://funancialist.jojobaest.repl.co/
